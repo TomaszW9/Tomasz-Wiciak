@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d1{
+            display: none;
+        }
+
+        #d2{
+            display: none;
+        }
+
+        #d3{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="div1()">div1</button>
+    <button onclick="div2()">div2</button>
+    <button onclick="div3()">div3</button>
+
+    <div id="d1">div1 qwertyuiop</div>
+    <div id="d2">div2 asdfghjkl</div>
+    <div id="d3">div3 zxcvbnm</div>
+
+    <script>
+        function div1() {
+            document.getElementById("d1").style.display = "block";
+            document.getElementById("d2").style.display = "none";
+            document.getElementById("d3").style.display = "none";
+        }
+
+        function div2() {
+            document.getElementById("d1").style.display = "none";
+            document.getElementById("d2").style.display = "block";
+            document.getElementById("d3").style.display = "none";
+        }
+
+        function div3() {
+            document.getElementById("d1").style.display = "none";
+            document.getElementById("d2").style.display = "none";
+            document.getElementById("d3").style.display = "block";
+        }
+    </script>
+</body>
+</html>
