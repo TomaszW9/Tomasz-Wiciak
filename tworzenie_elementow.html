@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" id="form1">
+        <input id="ipt" type="text"><br>
+        <textarea name="textarea" id="txa"></textarea> <br>
+        <button id="btn">btn</button>
+    </form>
+
+    <script>
+        let form = document.getElementById("form1")
+        form.addEventListener("submit", function(e) {
+            e.preventDefault()
+        })
+        document.getElementById("btn").addEventListener("click", function () {
+            let elem = document.querySelector("#ipt").value
+            const element = document.createElement(elem)
+            element.innerHTML = document.querySelector("#txa").value
+            document.body.appendChild(element)
+            
+        })
+    </script>
+</body>
+</html>
