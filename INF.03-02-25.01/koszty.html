@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montaż paneli podłogowych</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="montaz_paneli.png" alt="firma usługowa">
+    </header>
+    <nav>
+        <a href="index.html">Strona Główna</a>
+        <a href="oferta.html">Oferta</a>
+        <a href="koszty.html">Kalkulator kosztów</a>
+    </nav>
+    <main>
+        <h1>Kalkulator kosztów montażu</h1> <br>
+        
+        Szerokość pomieszczenia [m] <input type="number" id="sze"> <br>
+        Długość pomieszczenia [m] <input type="number" id="dlu"> <br>
+
+        typ panelu <br>
+        <input type="radio" name="rad" id="r1" value="l"> Panele Laminowane <br>
+        <input type="radio" name="rad" id="r2" value="w"> Panele Winylowe <br>
+        <input type="radio" name="rad" id="r3" value="p"> Deska podłogowa <br>
+        <button id="btn" onclick="licz()">Oblicz</button> <br>
+        <p id="wyn"></p>
+        <script>
+            function licz() {
+                let sze = document.getElementById("sze").value
+                let dlu = document.getElementById("dlu").value
+                let rad = document.querySelector('input[name="rad"]:checked').value
+                if(sze != 0 && dlu != 0){
+                    let m = sze * dlu
+                    if(rad == 'l'){
+                        let koszt = m * 12
+                        document.getElementById('wyn').innerHTML = 'Pole powierzchni pomieszczenia: ' + m +'m², koszt montażu ' + koszt + 'zł.'
+                    }if(rad == 'w'){
+                        let koszt = m * 14
+                        document.getElementById('wyn').innerHTML = 'Pole powierzchni pomieszczenia: ' + m +'m², koszt montażu ' + koszt + 'zł.'
+                    }if(rad == 'p'){
+                        let koszt = m * 18
+                        document.getElementById('wyn').innerHTML = 'Pole powierzchni pomieszczenia: ' + m +'m², koszt montażu ' + koszt + 'zł.'
+                    }
+                }else{
+                    document.getElementById('wyn').innerHTML = 'Złe wymiary. Wpisz poprawne i spróbuj ponownie.'
+                }
+                
+            }
+        </script>
+    </main>
+    <footer>
+        <h5>Autor strony: Tomasz Wiciak</h5>
+    </footer>
+</body>
+</html>
