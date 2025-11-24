@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">guzik 1</button>
+    <button id="btn2">guzik 2</button>
+    <script>
+        document.getElementById("btn").addEventListener("click", function() {
+            document.querySelector('h3:last-child').style.color = 'blue'
+        })
+        document.getElementById("btn2").addEventListener("click", function () {
+            const element = document.createElement('h3')
+            element.innerHTML = 'Nie stworzono poprawnie. Spróbuj ponownie.'
+            document.body.appendChild(element)
+        })
+    </script>
+</body>
+</html>
