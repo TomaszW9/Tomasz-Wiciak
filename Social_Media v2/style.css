@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+html, body{
+    height: 100%;
+    width: 100%;   
+}
+header{
+    height: 7%;
+    width: 100%;
+    background-color: hsl(271, 100%, 76%);
+}
+main{
+    height: 86%;
+    width: 100%;
+    background-color: hsl(271, 91%, 92%);
+}
+footer{
+    height: 7%;
+    width: 100%;
+    background-color: hsl(271, 100%, 76%);
+    clear: both;
+}

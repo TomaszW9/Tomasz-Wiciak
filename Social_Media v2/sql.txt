@@ -1,0 +1,21 @@
+CREATE DATABASE SocialM;
+CREATE TABLE users(
+	user_id int AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    user varchar(50) UNIQUE,
+    password varchar(50)
+);
+
+CREATE TABLE posts(
+	post_id int AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    author_id int,
+    title varchar(50),
+    text varchar(200),
+    created_at datetime
+);
+
+CREATE TABLE authors(
+	author_id int AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    user_id int,
+    name varchar(50),
+    surname varchar(50)
+);
